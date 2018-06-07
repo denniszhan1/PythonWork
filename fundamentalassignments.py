@@ -55,5 +55,109 @@ def filter(x):
             print "Big list!"
         else:
             print "Short list."
-        
+
+
+Type List
+
+def type(x):
+    y=0
+    z=""
+    for i in x:
+        if isinstance(i,int):
+            y+=i
+        if isinstance(i,str):
+            z+=i
+    if y==0:
+        print "The list you entered is of string type"
+        print "String:", z
+    elif z==[]:
+        print "The list you entered is of integer type"
+        print "Sum:", y
+    else:
+        print "The list you entered is of mixed type"
+        print "Sum:", y
+        print "String:", z
+
+
+Compare Lists
+
+def comp(x,y):
+    if x==y:
+        print "The lists are the same"
+    else:
+        print "The lists are not the same"
+
+
+Find Chars
+
+def letter(x,y):
+    count=0
+    for string in x:
+        for letter in string:
+            if letter==y:
+                count=+1
+        if count==0:
+            x.remove(string)
+        count=0 
+    print x
+
+
+Checkerboard
+
+def checkerboard():
+    for i in range(0,4):
+        print "* * * *"
+        print " * * * *"
+
+
+Odd/Even
+
+def odd_even():
+    for i in range(0,2001):
+        if i%2==0:
+            print "Number is ", i, ".", "This is an even number,"
+        else:
+            print "Number is ", i, ".", "This is an odd number,"
+
+
+Multiply
+
+def multiply(x,y):
+    for i in range(0,len(x)):
+        x[i]*=y
+    return x
+
+    
+Hacker Challenge
+
+def layered_multiples(arr):
+    new=[]
+    for i in arr:
+        print i
+        i=[1]*i
+        print i
+        new.append(i)
+    return new
+
+
+def scores():
+    print "Scores and Grades"
+    arr=[]
+    for i in range(0,11):
+        i=random.randint(60,100)
+        arr.append(i)
+    print arr
+    for score in arr:
+        if  if score >= 60 and score <= 69:
+            print "Score: ", score,"; Your grade is D"
+        elif score >= 70 and score <= 79:
+            print "Score: ", score, "; Your grade is C"
+        elif score >= 80 and score <= 89:
+            print "Score: ", score, "; Your grade is B"
+        elif score >= 90 and score <= 100:
+            print "Score: ", score, "; Your grade is A"
+        else:
+            print "You failed"
+    print "End of the program.  Bye!"
+
 
