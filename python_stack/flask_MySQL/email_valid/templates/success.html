@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Success</title>
+</head>
+<body>
+    <div class="success">
+        <p><b>Success!</b> The email address you entered ({{ email_address }}) is valid!</p>
+      </div>
+      <div class="emails">
+        <p><u>Email Addresses Entered</u></p>
+        <ul>
+          {% for email in emails %}
+          <li>{{ email['email'] }} {{email ['created_at'].strftime('%x %X %p')}}</li>
+          {% endfor %}
+        </ul>
+        <a href = '/'><button type="button" name="back">Add another</button></a>
+      </div>
+</body>
+</html>

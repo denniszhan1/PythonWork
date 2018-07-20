@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email</title>
+</head>
+<body>
+    {% if session['valid'] == False %}
+    <div class="notvalid">
+      <p><b>Email not valid!</b></p>
+    </div>
+  {% endif %}
+
+  <div class="form">
+    <form action="/process" method="post">
+      <p>Email Address:</p> <input type="text" name="email" placeholder="Type email here...">
+      <input type="submit" name="submit" value="Validate and Add email">
+    </form>
+  </div>
+</body>
+</html>
